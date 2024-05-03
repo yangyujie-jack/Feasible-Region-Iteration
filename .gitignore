@@ -1,0 +1,14 @@
+# Python
+*.py[cod]
+__pycache__/
+/*.ipynb
+/*.pstats
+/*.pkl
+
+# IDE
+.idea/
+.vscode/
+
+# Logs
+logs/
+figures/

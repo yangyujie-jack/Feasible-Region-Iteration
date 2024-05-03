@@ -1,0 +1,18 @@
+# Fundamental
+numpy
+jax  # See document for installation
+optax
+dm-haiku
+numpyro
+tensorboard
+tensorboardX
+
+# Used by environment
+gym==0.21.0
+matplotlib
+scikit-learn
+## safety-gym
+## safe-control-gym
+
+# Utility
+tqdm

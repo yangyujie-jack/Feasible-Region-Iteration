@@ -1,0 +1,15 @@
+[build-system]
+requires = ["flit_core >=3.7,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "relax"
+version = "0.1.0"
+description = "Reinforcement Learning for research that does not compromise on performance, with JAX."
+readme = "README.md"
+requires-python = ">=3.8"
+
+[tool.black]
+line-length = 120
+target-version = ['py39']
+exclude = "relax/env/"
