@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feasible Region Iteration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        section {
+            background-color: #fff;
+            padding: 10px;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        a {
+            color: inherit;
+        }
+        .author-info p {
+            margin-top: 30px;
+            color: #ccc;
+            text-align: center;
+        }
+        img {
+            display: block;
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .img-wrapper {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Synthesizing Control Barrier Functions With Feasible Region Iteration for Safe Reinforcement Learning</h1>
+        <div class="author-info">
+            <p>
+                Yujie Yang<sup>1</sup>,
+                Yuhang Zhang<sup>1</sup>,
+                Wenjun Zou<sup>1</sup>,
+                Jianyu Chen<sup>2</sup>,
+                Yuming Yin<sup>3</sup>,
+                Shengbo Eben Li<sup>&dagger;1</sup>,
+            </p>
+            <p>
+                <sup>&dagger;</sup>Corresponding author. Email: <a href="mailto:lishbo@tsinghua.edu.cn">lishbo@tsinghua.edu.cn</a><br>
+                <sup>1</sup>School of Vehicle and Mobility, Tsinghua University<br>
+                <sup>2</sup>Institute of Interdisciplinary Information Sciences, Tsinghua University<br>
+                <sup>3</sup>College of Mechanical Engineering, Zhejiang University of Technology
+            </p>
+            <p>
+                <a href="https://ieeexplore.ieee.org/document/10328440">paper</a> |
+                <a href="https://github.com/yangyujie-jack/Feasible-Region-Iteration">code</a>
+            </p>
+        </div>
+    </header>
+    <div class="container">
+        <br>
+        <img src="assets/images/framework.png" width="500px"/>
+
+        <section>
+            <h2>Abstract</h2>
+            <p>Safety is a critical concern when applying reinforcement learning (RL) to real-world control problems. A widely used method for ensuring safety is to learn a control barrier function with heuristic feasibility labels that come from expert demonstrations or constraint functions. However, their forward invariant sets fall short of the maximum feasible region because of inaccurate labels. This paper proposes an algorithm called feasible region iteration (FRI) that learns the maximum feasible region to generate accurate feasibility labels. The core of FRI is a constraint decay function (CDF), which comes with a self-consistency condition and naturally leads to the constraint Bellman equation. The optimal CDF, which represents the maximum feasible region, is learned through the iteration of feasible region identification and feasible region expansion. Experiment results show that our algorithm achieves near-zero constraint violations and comparable or higher performance than the baselines.</p>
+        </section>
+
+        <section>
+            <h2>Methods</h2>
+            <p>Finding the feasible region of a given policy:</h2>
+            <img src="assets/images/feasible_region_identification.png" width="480px"/>
+            <p>Finding the maximum feasible region of a control system:</h2>
+            <img src="assets/images/feasible_region_iteration.png" width="480px"/>
+            <p>Safe RL with FRI:</h2>
+            <img src="assets/images/SAC-FRI.png" width="480px"/>
+        </section>
+
+        <section>
+            <h2>Experiment Results</h2>
+            <p>CBFs on classic control tasks:</p>
+            <img src="assets/images/classic.png" width="550px">
+            <p>Safe RL training curves on safety-critical control tasks:</p>
+            <img src="assets/images/curves.png" width="100%">
+            <p>CBFs on safety-critical control tasks:</p>
+            <img src="assets/images/safe_rl_map.png" width="550px">
+        </section>
+    </div>
+</body>
+</html>
