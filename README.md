@@ -1,6 +1,7 @@
 # Feasible-Region-Iteration
 Code of the paper "Synthesizing Control Barrier Functions With Feasible Region Iteration for Safe Reinforcement Learning" published on *IEEE Transactions on Automatic Control*.\
-[paper](https://ieeexplore.ieee.org/document/10328440)
+[paper](https://ieeexplore.ieee.org/document/10328440) |
+[website](https://yangyujie-jack.github.io/Feasible-Region-Iteration/)
 
 ## Installation
 
