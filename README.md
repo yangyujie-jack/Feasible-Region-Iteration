@@ -24,3 +24,5 @@ pip install glfw
 pip install mujoco-py==2.0.2.13 --no-cache-dir --no-binary :all: --no-build-isolation
 pip install -e .  # in safety-gym
 ```
+
+The training environments are provided in the [safe-env](https://github.com/yangyujie-jack/safe-env) package.
